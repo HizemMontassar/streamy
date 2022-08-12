@@ -1,7 +1,7 @@
 <template>
   <div>
     <img
-      src="../assets/tv-shows/stranger-things.png"
+      src="../../assets/tv-shows/stranger-things.png"
       alt="John Wick"
       class="w-full h-screen"
     />
@@ -29,7 +29,7 @@
           <button class="py-6 px-1 bg-netflix-red-400"></button>
           <div class="py-1 px-2 w-52 bg-gradient-to-r from-red-800">
             <img
-              src="../assets/streamy-logo-white.png"
+              src="../../assets/streamy-logo-white.png"
               alt="Streamy"
               class="w-auto h-10"
             />

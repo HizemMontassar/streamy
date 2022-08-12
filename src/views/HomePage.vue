@@ -3,153 +3,51 @@
     <slider-page></slider-page>
   </div>
   <div class="favorites text-white">
-    <div class="flex flex-col my-8 mx-24">
-      <div class="flex flex-row justify-between">
-        <span class="text-xl font-semibold">Your Favorites</span>
-        <div class="flex flex-row justify-between">
-          <button class="p-1 mr-2 bg-netflix-red-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button class="p-1 bg-netflix-red-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-row items-center justify-between mt-2 mb-8">
-        <div>
-          <img
-            src="../assets/tv-shows/friends.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/tv-shows/game-of-thrones.png"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/tv-shows/lucifer.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/tv-shows/the-walking-dead.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-      </div>
-    </div>
+    <favorites-page></favorites-page>
   </div>
   <div class="upcoming-movies text-white">
-    <div class="flex flex-col my-8 mx-24">
-      <div class="flex flex-row justify-between">
-        <span class="text-xl font-semibold">Upcoming Movies</span>
-        <div class="flex flex-row justify-between">
-          <button class="p-1 mr-2 bg-netflix-red-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button class="p-1 bg-netflix-red-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-row items-center justify-between mt-2 mb-8">
-        <div>
-          <img
-            src="../assets/movies/john-wick.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/movies/jurassic-world.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/movies/rampage.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/movies/sonic.jpg"
-            alt="John Wick"
-            class="h-auto w-80"
-          />
-        </div>
-      </div>
-    </div>
+    <upcoming-movies-page></upcoming-movies-page>
+  </div>
+  <div class="top-10 text-white">
+    <top-ten-page></top-ten-page>
+  </div>
+  <div class="suggested-for-you text-white">
+    <suggested-page></suggested-page>
+  </div>
+  <div class="suggested-movie text-white">
+    <suggested-movie></suggested-movie>
+  </div>
+  <div class="trending-page text-white">
+    <trending-page></trending-page>
+  </div>
+  <div class="tv-show-page text-white">
+    <tv-show-page></tv-show-page>
+  </div>
+  <div class="tv-thrillers-page text-white">
+    <tv-thrillers-page></tv-thrillers-page>
   </div>
 </template>
 <script>
-import SliderPage from "@/components/SliderPage.vue";
+import SliderPage from "@/components/home/SliderPage.vue";
+import FavoritesPage from "@/components/home/FavoritesPage.vue";
+import UpcomingMoviesPage from "@/components/home/UpcomingMoviesPage.vue";
+import TopTenPage from "@/components/home/TopTenPage.vue";
+import SuggestedPage from "@/components/home/SuggestedPage.vue";
+import SuggestedMovie from "@/components/home/SuggestedMovie.vue";
+import TrendingPage from "@/components/home/TrendingPage.vue";
+import TvShowPage from "@/components/home/TvShowPage.vue";
+import TvThrillersPage from "@/components/home/TvThrillersPage.vue";
 export default {
   components: {
     SliderPage,
+    FavoritesPage,
+    UpcomingMoviesPage,
+    TopTenPage,
+    SuggestedPage,
+    SuggestedMovie,
+    TrendingPage,
+    TvShowPage,
+    TvThrillersPage,
   },
 };
 </script>
