@@ -41,7 +41,7 @@
       </div>
       <div class="flex flex-col space-y-2">
         <a href="#">FAQ</a>
-        <a href="#">Contacct Us</a>
+        <a href="#">Contact Us</a>
         <a href="#">Legal Notice</a>
       </div>
       <div class="flex flex-row items-center space-x-2">

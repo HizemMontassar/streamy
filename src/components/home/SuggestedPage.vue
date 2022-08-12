@@ -40,29 +40,29 @@
     <div class="flex flex-row items-center justify-between mt-2 mb-8">
       <div>
         <img
-          src="../../assets/tv-shows/friends.jpg"
-          alt="John Wick"
+          src="../../assets/tv-shows/sex-education.jpg"
+          alt="Sex Education"
           class="h-auto w-80"
         />
       </div>
       <div>
         <img
-          src="../../assets/tv-shows/game-of-thrones.png"
-          alt="John Wick"
+          src="../../assets/tv-shows/euphoria.jpg"
+          alt="Euphoria"
           class="h-auto w-80"
         />
       </div>
       <div>
         <img
-          src="../../assets/tv-shows/lucifer.jpg"
-          alt="John Wick"
+          src="../../assets/tv-shows/house-of-dragons.jpg"
+          alt="House of Dragons"
           class="h-auto w-80"
         />
       </div>
       <div>
         <img
-          src="../../assets/tv-shows/the-walking-dead.jpg"
-          alt="John Wick"
+          src="../../assets/tv-shows/hannibal.jpg"
+          alt="Hannibal"
           class="h-auto w-80"
         />
       </div>

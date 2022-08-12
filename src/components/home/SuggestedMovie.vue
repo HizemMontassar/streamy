@@ -74,7 +74,7 @@
           >
             Play Now
           </button>
-          <button class="inline-flex items-center px-6 py-2">
+          <button class="inline-flex items-center border border-white px-6 py-2">
             More Details
           </button>
         </div>

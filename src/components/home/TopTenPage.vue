@@ -23,23 +23,23 @@
         </button>
         <div class="flex flex-col space-y-1">
           <img
-            src="../../assets/tv-shows/friends.jpg"
-            alt="John Wick"
+            src="../../assets/tv-shows/the-office.jpg"
+            alt="The Office"
             class="h-auto w-72"
           />
           <img
-            src="../../assets/tv-shows/game-of-thrones.png"
-            alt="John Wick"
+            src="../../assets/tv-shows/peaky-blinders.jpg"
+            alt="Peaky Blinders"
             class="h-auto w-72"
           />
           <img
-            src="../../assets/tv-shows/lucifer.jpg"
-            alt="John Wick"
+            src="../../assets/tv-shows/penny-dreadful.jpg"
+            alt="Penny Dreadful"
             class="h-auto w-72"
           />
           <img
-            src="../../assets/tv-shows/the-walking-dead.jpg"
-            alt="John Wick"
+            src="../../assets/tv-shows/burn-notice.jpg"
+            alt="Burn Notice"
             class="h-auto w-72"
           />
         </div>
