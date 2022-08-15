@@ -1,6 +1,6 @@
 <template>
   <div class="slider-page">
-    <slider-page></slider-page>
+    <slider-page :image="image"></slider-page>
   </div>
   <div class="favorites text-white">
     <favorites-page></favorites-page>
@@ -49,5 +49,8 @@ export default {
     TvShowPage,
     TvThrillersPage,
   },
+  data: () => ({
+    image: "../../assets/tv-shows/stranger-things.png",
+  }),
 };
 </script>

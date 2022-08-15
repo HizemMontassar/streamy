@@ -1,7 +1,7 @@
 <template>
   <div>
     <img
-      src="../../assets/tv-shows/stranger-things.png"
+      :src="test"
       alt="John Wick"
       class="w-full h-screen"
     />
@@ -108,3 +108,11 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["image"],
+  data: () => ({
+    test: "../../assets/tv-shows/stranger-things.png",
+  }),
+};
+</script>
