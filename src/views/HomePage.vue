@@ -1,6 +1,6 @@
 <template>
   <div class="slider-page">
-    <slider-page :image="image"></slider-page>
+    <carousel :tvShows="tvShows"></carousel>
   </div>
   <div class="favorites text-white">
     <favorites-page></favorites-page>
@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import SliderPage from "@/components/home/SliderPage.vue";
+//import SliderPage from "@/components/home/SliderPage.vue";
 import FavoritesPage from "@/components/home/FavoritesPage.vue";
 import UpcomingMoviesPage from "@/components/home/UpcomingMoviesPage.vue";
 import TopTenPage from "@/components/home/TopTenPage.vue";
@@ -37,9 +37,10 @@ import SuggestedMovie from "@/components/home/SuggestedMovie.vue";
 import TrendingPage from "@/components/home/TrendingPage.vue";
 import TvShowPage from "@/components/home/TvShowPage.vue";
 import TvThrillersPage from "@/components/home/TvThrillersPage.vue";
+import Carousel from "@/components/home/carousel/CarouselPage.vue";
 export default {
   components: {
-    SliderPage,
+    //SliderPage,
     FavoritesPage,
     UpcomingMoviesPage,
     TopTenPage,
@@ -48,9 +49,51 @@ export default {
     TrendingPage,
     TvShowPage,
     TvThrillersPage,
+    Carousel,
   },
   data: () => ({
-    image: "../../assets/tv-shows/stranger-things.png",
+    tvShows: [
+      {
+        id: "0",
+        name: "Stranger Things",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consectetur rhoncus leo, at dictum massa congue laoreet. Fusce ac dui a justo consectetur rutrum vitae ac sapien.",
+        image: require("../assets/tv-shows/stranger-things.png"),
+      },
+      {
+        id: "1",
+        name: "Westworld",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consectetur rhoncus leo, at dictum massa congue laoreet. Fusce ac dui a justo consectetur rutrum vitae ac sapien.",
+        image: require("../assets/tv-shows/westworld.jpg"),
+      },
+      {
+        id: "2",
+        name: "Better Call Saul",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consectetur rhoncus leo, at dictum massa congue laoreet. Fusce ac dui a justo consectetur rutrum vitae ac sapien.",
+        image: require("../assets/tv-shows/better-call-saul.jpg"),
+      },
+    ],
+    currentSlide: 0,
+    slideInterval: null,
   }),
+
+  methods: {
+    setCurrentSlide(index) {
+      this.currentSlide = index;
+    },
+  },
+
+  mounted() {
+    this.slideInterval = setInterval(() => {
+      const index =
+        this.currentSlide < this.tvShows.length - 1 ? this.currentSlide + 1 : 0;
+      this.setCurrentSlide(index);
+    }, 3000);
+  },
+  beforeUnmount() {
+    clearInterval(this.slideInterval);
+  },
 };
 </script>
