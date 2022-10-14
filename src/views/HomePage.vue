@@ -1,9 +1,14 @@
 <template>
   <div class="slider-page">
-    <carousel :tvShows="tvShows"></carousel>
+    <single-slide-carousel
+      :tvShows="singleSlideCarouselShows"
+    ></single-slide-carousel>
   </div>
   <div class="favorites text-white">
     <favorites-page></favorites-page>
+    <!-- <multiple-slides-carousel
+      :tvShows="multipleSlidesCarouselShows"
+    ></multiple-slides-carousel> -->
   </div>
   <div class="upcoming-movies text-white">
     <upcoming-movies-page></upcoming-movies-page>
@@ -28,7 +33,6 @@
   </div>
 </template>
 <script>
-//import SliderPage from "@/components/home/SliderPage.vue";
 import FavoritesPage from "@/components/home/FavoritesPage.vue";
 import UpcomingMoviesPage from "@/components/home/UpcomingMoviesPage.vue";
 import TopTenPage from "@/components/home/TopTenPage.vue";
@@ -37,11 +41,11 @@ import SuggestedMovie from "@/components/home/SuggestedMovie.vue";
 import TrendingPage from "@/components/home/TrendingPage.vue";
 import TvShowPage from "@/components/home/TvShowPage.vue";
 import TvThrillersPage from "@/components/home/TvThrillersPage.vue";
-import Carousel from "@/components/home/carousel/CarouselPage.vue";
+import SingleSlideCarousel from "@/components/home/singleSlideCarousel/CarouselPage.vue";
+// import MultipleSlidesCarousel from "@/components/home/multipleSlidesCarousel/CarouselPage.vue";
 export default {
   components: {
-    //SliderPage,
-    FavoritesPage,
+    // FavoritesPage,
     UpcomingMoviesPage,
     TopTenPage,
     SuggestedPage,
@@ -49,10 +53,11 @@ export default {
     TrendingPage,
     TvShowPage,
     TvThrillersPage,
-    Carousel,
+    SingleSlideCarousel,
+    FavoritesPage,
   },
   data: () => ({
-    tvShows: [
+    singleSlideCarouselShows: [
       {
         id: "0",
         name: "Stranger Things",
@@ -75,6 +80,52 @@ export default {
         image: require("../assets/tv-shows/better-call-saul.jpg"),
       },
     ],
+    multipleSlidesCarouselShows: [
+      [
+        {
+          id: "0",
+          name: "Friends",
+          image: require("../assets/tv-shows/friends.jpg"),
+        },
+        {
+          id: "1",
+          name: "Game Of Thrones",
+          image: require("../assets/tv-shows/game-of-thrones.png"),
+        },
+        {
+          id: "2",
+          name: "Lucifer",
+          image: require("../assets/tv-shows/lucifer.jpg"),
+        },
+        {
+          id: "3",
+          name: "The Walking Dead",
+          image: require("../assets/tv-shows/the-walking-dead.jpg"),
+        },
+      ],
+      [
+        {
+          id: "4",
+          name: "John Wick",
+          image: require("../assets/movies/john-wick.jpg"),
+        },
+        {
+          id: "5",
+          name: "Jurassic World",
+          image: require("../assets/movies/jurassic-world.jpg"),
+        },
+        {
+          id: "6",
+          name: "Rampage",
+          image: require("../assets/movies/rampage.jpg"),
+        },
+        {
+          id: "7",
+          name: "Sonic",
+          image: require("../assets/movies/sonic.jpg"),
+        },
+      ],
+    ],
     currentSlide: 0,
     slideInterval: null,
   }),
@@ -88,7 +139,9 @@ export default {
   mounted() {
     this.slideInterval = setInterval(() => {
       const index =
-        this.currentSlide < this.tvShows.length - 1 ? this.currentSlide + 1 : 0;
+        this.currentSlide < this.singleSlideCarouselShows.length - 1
+          ? this.currentSlide + 1
+          : 0;
       this.setCurrentSlide(index);
     }, 3000);
   },
